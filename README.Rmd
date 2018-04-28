@@ -1,0 +1,49 @@
+---
+title: "Data Cleaning Project"
+author: Rajeev Kumar
+date: 04/28/2018
+output: html_document
+---
+
+```{r}
+library(knitr)
+setwd("C:/Data Science/Data cleaning/Project")
+read_chunk("run_analysis.R")
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Installing Data.Table package and setting up the working directory
+
+```{r C1, results="hide", warning=FALSE, message=FALSE}
+```
+
+## Loading Training files, Test files, Activity file, and feature  file into R
+
+```{r C2}
+```
+
+### Merging training and test datasets
+
+```{r C3}
+```
+
+### Identifying columns only for mean and standard deviation from feature database
+
+```{r C4}
+
+```
+
+### Using descriptive activity names to name the activities in the data set
+
+```{r C5}
+
+```
+
+### Calculating mean and STD by Subject ID and Activity ID
+
+```{r C6}
+```
+
+##Writting dataset 
+
+```{r C7}
+```
