@@ -1,0 +1,96 @@
+Data Dictionary: - 2018 Human Activity Recognition Using Smartphones dataset
+
+
+"Subject_ID"
+	Contains subject IDs identifying type of subjects data is collected for.
+"Activity_ID"
+	Contains the posture of the subjects for which data was collected
+				1       Walking
+				2	Walking Upstairs
+				3	Walking Downstairs
+				4	Sitting
+				5	Standing
+				6	laying
+
+"tBodyAcc-mean()-X"
+"tBodyAcc-mean()-Y"
+"tBodyAcc-mean()-Z"
+	Body acceleration means for X, Y and Z coordinates
+"tBodyAcc-std()-X"
+"tBodyAcc-std()-Y"
+"tBodyAcc-std()-Z"
+	Body acceleration STD for X, Y and Z coordinates
+"tGravityAcc-mean()-X"
+"tGravityAcc-mean()-Y"
+"tGravityAcc-mean()-Z"
+	Gravity acceleration mean for X, Y and Z coordinates
+"tGravityAcc-std()-X"
+"tGravityAcc-std()-Y"
+"tGravityAcc-std()-Z"
+	Gravity acceleration STD for X, Y and Z coordinates
+"tBodyAccJerk-mean()-X"
+"tBodyAccJerk-mean()-Y"
+"tBodyAccJerk-mean()-Z"
+	Body acceleration Jerk mean for X, Y and Z coordinates
+"tBodyAccJerk-std()-X"
+"tBodyAccJerk-std()-Y"
+"tBodyAccJerk-std()-Z"
+	Body acceleration Jerk STD for X, Y and Z coordinates
+"tBodyGyro-mean()-X"
+"tBodyGyro-mean()-Y"
+"tBodyGyro-mean()-Z"
+	Body acceleration Gyro mean for X, Y and Z coordinates
+"tBodyGyro-std()-X"
+"tBodyGyro-std()-Y"
+"tBodyGyro-std()-Z"
+	Body gyro STD for X, Y and Z coordinates
+"tBodyGyroJerk-mean()-X"
+"tBodyGyroJerk-mean()-Y"
+"tBodyGyroJerk-mean()-Z"
+	Body gyro jerk mean for X, Y and Z coordinates
+"tBodyGyroJerk-std()-X"
+"tBodyGyroJerk-std()-Y"
+"tBodyGyroJerk-std()-Z"
+	Body gyro jerk STD for X, Y and Z coordinates
+"tBodyAccMag-mean()"
+"tBodyAccMag-std()"
+"tGravityAccMag-mean()"
+"tGravityAccMag-std()"
+"tBodyAccJerkMag-mean()"
+"tBodyAccJerkMag-std()"
+"tBodyGyroMag-mean()"
+"tBodyGyroMag-std()"
+"tBodyGyroJerkMag-mean()"
+"tBodyGyroJerkMag-std()"
+"fBodyAcc-mean()-X"
+"fBodyAcc-mean()-Y"
+"fBodyAcc-mean()-Z"
+	Body acceleration meanfor X, Y and Z coordinates
+"fBodyAcc-std()-X"
+"fBodyAcc-std()-Y"
+"fBodyAcc-std()-Z"
+	Body acceleration STD for X, Y and Z coordinates
+"fBodyAccJerk-mean()-X"
+"fBodyAccJerk-mean()-Y"
+"fBodyAccJerk-mean()-Z"
+	ACC Jerk mean for X, Y and Z coordinates
+"fBodyAccJerk-std()-X"
+"fBodyAccJerk-std()-Y"
+"fBodyAccJerk-std()-Z"
+	Body acceleration jerk STD for X, Y and Z coordinates
+"fBodyGyro-mean()-X"
+"fBodyGyro-mean()-Y"
+"fBodyGyro-mean()-Z"
+	Body gyro mean for X, Y and Z coordinates
+"fBodyGyro-std()-X"
+"fBodyGyro-std()-Y"
+"fBodyGyro-std()-Z"
+	Body Gyrp STD for X, Y and Z coordinates
+"fBodyAccMag-mean()"
+"fBodyAccMag-std()"
+"fBodyBodyAccJerkMag-mean()"
+"fBodyBodyAccJerkMag-std()"
+"fBodyBodyGyroMag-mean()"
+"fBodyBodyGyroMag-std()"
+"fBodyBodyGyroJerkMag-mean()"
+"fBodyBodyGyroJerkMag-std()"
