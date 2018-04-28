@@ -5,45 +5,58 @@ date: 04/28/2018
 output: html_document
 ---
 
+## Setting up working directory
 ```{r}
-library(knitr)
+library("data.table")
 setwd("C:/Data Science/Data cleaning/Project")
-read_chunk("run_analysis.R")
-knitr::opts_chunk$set(echo = TRUE)
 ```
+
 ## Installing Data.Table package and setting up the working directory
+```{r}
+trnX<-read.table("X_train.txt")
+trnY<-read.table("y_train.txt")
+tstX<-read.table("X_test.txt")
+tstY<-read.table("y_test.txt")
 
-```{r C1, results="hide", warning=FALSE, message=FALSE}
+subtst<-read.table("subject_test.txt")
+subtrn<-read.table("subject_train.txt")
+
+lblact<-read.table("activity_labels.txt")
+fture<-read.table("features.txt")
 ```
 
-## Loading Training files, Test files, Activity file, and feature  file into R
-
-```{r C2}
+## Merging training and test datasets
+```{r}
+merge_x<-rbind(tstX,trnX)
+merge_y<-rbind(tstY,trnY)
+merge_sub<-rbind(subtst,subtrn)
 ```
 
-### Merging training and test datasets
-
-```{r C3}
+## Identifying columns only for mean and standard deviation from feature database
+```{r}
+sel_col<-grep("mean\\(\\)|std\\(\\)",fture[,2])
+merge_scol<-merge_x[,sel_col]
 ```
 
-### Identifying columns only for mean and standard deviation from feature database
-
-```{r C4}
-
+## Using descriptive activity names to name the activities in the data set
+```{r}
+Activity_ID<-lblact[merge_y[,1],2]
 ```
 
-### Using descriptive activity names to name the activities in the data set
-
-```{r C5}
-
+## Appropriately labels the data set with descriptive variable names.
+```{r}
+names(merge_scol)<-fture[sel_col,2]
+names(merge_sub)<-"Subject_ID"
+fdata<-cbind(merge_sub, Activity_ID,merge_scol)
 ```
 
-### Calculating mean and STD by Subject ID and Activity ID
-
-```{r C6}
+## Calculating mean and STD by Subject ID and Activity ID
+```{r}
+fdata<-data.table(fdata)
+sd_avg <- fdata[,lapply(.SD,mean), by = 'Subject_ID,Activity_ID']
 ```
 
-##Writting dataset 
-
-```{r C7}
+## Writting dataset to the file
+```{r}
+write.table(sd_avg,"tidydataset.txt",row.names = FALSE)
 ```
